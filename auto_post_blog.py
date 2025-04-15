@@ -1,8 +1,11 @@
+# auto_post_blog.py
+
 import os
 from dotenv import load_dotenv
 from datetime import datetime
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+
 from utils.gpt_generator import generate_article
 from utils.wordpress_client import publish_to_wordpress
 from utils.telegram_notify import send_telegram_message
@@ -35,13 +38,16 @@ for i, row in enumerate(rows):
     status = row.get("Статус", "").lower()
     comment = row.get("Комментарии", "")
     category_name = row.get("Рубрика", "Технологии")
+    system_prompt = row.get("Системные инструкции (промт)", "")
+    role = row.get("Роль", "")
+    temperature = float(row.get("Температура", 0.7) or 0.7)
     category_id = category_map.get(category_name, 1)
-    
+
     if date <= today and status == "к публикации":
         print(f"\n🔄 Обработка темы: {title}")
         try:
             print("🧠 Генерация статьи...")
-            content = generate_article(title, keywords)
+            content = generate_article(title, keywords, system_prompt, role, temperature)
             print("✅ Генерация завершена.")
 
             print("📤 Публикация в WordPress...")
@@ -52,8 +58,9 @@ for i, row in enumerate(rows):
             send_telegram_message(message)
             print("📩 Уведомление отправлено в Telegram.")
 
-            sheet.update_cell(i + 2, 4, "опубликовано")
-            print("📊 Статус обновлён в Google Sheets.")
+            sheet.update_cell(i + 2, 4, "опубликовано")  # Статус
+            sheet.update_cell(i + 2, 8, link)            # Ссылка на пост
+            print("📊 Статус и ссылка обновлены в Google Sheets.")
 
         except Exception as e:
             print(f"❌ Ошибка при публикации статьи '{title}': {e}")
