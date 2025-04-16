@@ -10,6 +10,8 @@ from oauth2client.service_account import ServiceAccountCredentials
 from utils.gpt_generator import generate_article
 from utils.wordpress_client import publish_to_wordpress
 from utils.telegram_notify import send_telegram_message
+from utils.image_generator import generate_image
+from utils.prompt_builder import build_cover_prompt
 
 # === Логирование в файл ===
 log_dir = "logs"
@@ -43,7 +45,7 @@ today = datetime.now().strftime("%Y-%m-%d")
 
 for i, row in enumerate(rows):
     raw_date = row.get("Дата публикации")
-    
+
     # === Обработка формата даты ===
     if isinstance(raw_date, int):
         base_date = datetime(1899, 12, 30)
@@ -86,8 +88,28 @@ for i, row in enumerate(rows):
             print("✅ Генерация завершена.")
             logging.info("✅ Генерация завершена.")
 
+            print("🧠 Генерация промта обложки...")
+            cover_prompt = build_cover_prompt(
+                title=title,
+                focus_keyword=focus_keyword,
+                category=category_name,
+                system_prompt=system_prompt,
+                keywords=keywords,
+                role=role,
+                temperature=temperature
+            )
+            print(f"🖼 Промт генерации изображения (dalle): {cover_prompt}")
+
+            try:
+                image_url = generate_image(cover_prompt)
+                logging.info(f"🖼 Изображение сгенерировано: {image_url}")
+            except Exception as img_error:
+                print(f"⚠️ Ошибка генерации/загрузки обложки: {img_error}")
+                logging.warning(f"⚠️ Ошибка генерации/загрузки обложки: {img_error}")
+                image_url = ""
+
             print("📤 Публикация в WordPress...")
-            link = publish_to_wordpress(title, content, category_id, focus_keyword)
+            link = publish_to_wordpress(title, content, category_id, focus_keyword, image_url)
             print(f"✅ Пост опубликован: {link}")
             logging.info(f"✅ Пост опубликован: {link}")
 

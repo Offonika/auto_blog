@@ -1,19 +1,16 @@
-# utils/wordpress_client.py
-
 import os
-import re
 import requests
-from dotenv import load_dotenv
+import re
+from utils.image_generator import upload_to_wordpress
 from utils.auth import get_jwt_token
-from utils.image_generator import generate_image, upload_to_wordpress
 
-load_dotenv()
 
 def slugify(text):
     text = re.sub(r"[^\w\s-]", "", text).strip().lower()
     return re.sub(r"[\s_]+", "-", text)
 
-def publish_to_wordpress(title, content, category_id=1, focus_keyword=""):
+
+def publish_to_wordpress(title, content, category_id=1, focus_keyword="", image_url=""):
     token = get_jwt_token()
     url = os.getenv("WP_URL") + "/wp-json/wp/v2/posts"
     headers = {
@@ -21,18 +18,20 @@ def publish_to_wordpress(title, content, category_id=1, focus_keyword=""):
         "Content-Type": "application/json"
     }
 
+    # === Генерация слага на основе ключевика
     slug = slugify(focus_keyword or title)
-    excerpt = f"Краткое описание: {focus_keyword}. Узнайте больше в статье!"
+    excerpt = f"{focus_keyword.capitalize()}. Узнайте больше в статье."
 
-    # Попробуем сгенерировать обложку
-    try:
-        prompt = f"Обложка к статье на тему: {focus_keyword}, в технологичном и минималистичном стиле"
-        image_url = generate_image(prompt)
-        media_id = upload_to_wordpress(image_url)
-    except Exception as e:
-        print(f"⚠️ Ошибка генерации/загрузки обложки: {e}")
-        media_id = None
+    # === Загрузка обложки, если есть image_url
+    media_id = None
+    if image_url:
+        try:
+            media_id = upload_to_wordpress(image_url)
+        except Exception as e:
+            print(f"⚠️ Ошибка загрузки обложки: {e}")
+            media_id = None
 
+    # === Публикация
     data = {
         "title": title,
         "content": content,
@@ -41,9 +40,17 @@ def publish_to_wordpress(title, content, category_id=1, focus_keyword=""):
         "status": "publish",
         "format": "standard",
         "categories": [category_id],
-        "featured_media": media_id or 0
+        "featured_media": media_id or 0,
+        "meta": {
+            "rank_math_focus_keyword": focus_keyword
+        }
     }
 
     response = requests.post(url, json=data, headers=headers)
     response.raise_for_status()
-    return response.json()["link"]
+
+    post = response.json()
+
+    # === Читаемый URL: blog.site.ru/slug
+    readable_link = f"{os.getenv('WP_URL')}/{slug}/"
+    return readable_link or post.get("link")
