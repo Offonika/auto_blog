@@ -163,3 +163,111 @@
 2025-04-16 09:18:44,416 [INFO] ✅ Пост опубликован: https://blog.offonika.ru/социальные-сети-как-новые-поисковые-системы/
 2025-04-16 09:18:44,681 [INFO] 📩 Уведомление отправлено в Telegram.
 2025-04-16 09:18:46,072 [INFO] 📊 Статус и ссылка обновлены в Google Sheets.
+2025-04-16 09:29:04,395 [INFO] 🔄 Обработка темы: Социальные сети как новые поисковые системы
+2025-04-16 09:29:22,633 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 09:29:22,674 [INFO] ✅ Генерация завершена.
+2025-04-16 09:29:45,051 [INFO] HTTP Request: POST https://api.openai.com/v1/images/generations "HTTP/1.1 200 OK"
+2025-04-16 09:29:45,087 [INFO] 🖼 Изображение сгенерировано: https://oaidalleapiprodscus.blob.core.windows.net/private/org-80ZbSpkdhK3kZPnpCX3xGTk8/user-yTbJnZBjj8JJSAnP6LICaAZB/img-scxRlga1e33F5LNUpGmMFLEA.png?st=2025-04-16T05%3A29%3A44Z&se=2025-04-16T07%3A29%3A44Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=475fd488-6c59-44a5-9aa9-31c4db451bea&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-15T15%3A36%3A26Z&ske=2025-04-16T15%3A36%3A26Z&sks=b&skv=2024-08-04&sig=PlwF%2BOhnDQvyme1rwzqF%2BGgeTEn/zUdgneAm3%2BdxbdQ%3D
+2025-04-16 09:29:52,872 [INFO] ✅ Пост опубликован: https://blog.offonika.ru/социальные-сети-как-новые-поисковые-системы/
+2025-04-16 09:29:53,172 [INFO] 📩 Уведомление отправлено в Telegram.
+2025-04-16 09:29:54,571 [INFO] 📊 Статус и ссылка обновлены в Google Sheets.
+2025-04-16 09:58:03,824 [INFO] 🔄 Обработка темы: Возрождение интереса к текстовому контенту
+2025-04-16 09:58:17,808 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 09:58:17,848 [INFO] ✅ Генерация завершена.
+2025-04-16 09:58:37,880 [INFO] HTTP Request: POST https://api.openai.com/v1/images/generations "HTTP/1.1 200 OK"
+2025-04-16 09:58:37,881 [INFO] 🖼 Изображение сгенерировано: https://oaidalleapiprodscus.blob.core.windows.net/private/org-80ZbSpkdhK3kZPnpCX3xGTk8/user-yTbJnZBjj8JJSAnP6LICaAZB/img-oFKYgi3GErIkP3ofHGcMZ9xO.png?st=2025-04-16T05%3A58%3A37Z&se=2025-04-16T07%3A58%3A37Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=475fd488-6c59-44a5-9aa9-31c4db451bea&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-15T23%3A31%3A25Z&ske=2025-04-16T23%3A31%3A25Z&sks=b&skv=2024-08-04&sig=JgHeHENneI4SAyP10x16Su6G5XSeB76pvBHJJmmu0Ow%3D
+2025-04-16 09:58:46,514 [INFO] ✅ Пост опубликован: https://blog.offonika.ru/возрождение-интереса-к-текстовому-контенту/
+2025-04-16 09:58:46,831 [INFO] 📩 Уведомление отправлено в Telegram.
+2025-04-16 09:58:47,828 [INFO] 📊 Статус и ссылка обновлены в Google Sheets.
+2025-04-16 10:03:45,332 [INFO] 🔄 Обработка темы: Возрождение интереса к текстовому контенту
+2025-04-16 10:04:01,513 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 10:04:01,553 [INFO] ✅ Генерация завершена.
+2025-04-16 10:04:20,659 [INFO] HTTP Request: POST https://api.openai.com/v1/images/generations "HTTP/1.1 200 OK"
+2025-04-16 10:04:20,660 [INFO] 🖼 Изображение сгенерировано: https://oaidalleapiprodscus.blob.core.windows.net/private/org-80ZbSpkdhK3kZPnpCX3xGTk8/user-yTbJnZBjj8JJSAnP6LICaAZB/img-AhLTpqeX517PigrVmVjwOYO1.png?st=2025-04-16T06%3A04%3A20Z&se=2025-04-16T08%3A04%3A20Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=475fd488-6c59-44a5-9aa9-31c4db451bea&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-16T00%3A07%3A09Z&ske=2025-04-17T00%3A07%3A09Z&sks=b&skv=2024-08-04&sig=OQ1DNvNzm7ZB0cEdoFJfo%2BfEoTphzhDidgZ9d/DUn2Y%3D
+2025-04-16 10:04:29,443 [INFO] ✅ Пост опубликован: https://blog.offonika.ru/возрождение-интереса-к-текстовому-контенту/
+2025-04-16 10:04:29,861 [INFO] 📩 Уведомление отправлено в Telegram.
+2025-04-16 10:04:31,455 [INFO] 📊 Статус и ссылка обновлены в Google Sheets.
+2025-04-16 10:12:32,546 [INFO] 🔄 Обработка темы: Возрождение интереса к текстовому контенту
+2025-04-16 10:12:50,620 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 10:12:50,659 [INFO] ✅ Генерация завершена.
+2025-04-16 10:13:11,370 [INFO] HTTP Request: POST https://api.openai.com/v1/images/generations "HTTP/1.1 200 OK"
+2025-04-16 10:13:11,405 [INFO] 🖼 Изображение сгенерировано: https://oaidalleapiprodscus.blob.core.windows.net/private/org-80ZbSpkdhK3kZPnpCX3xGTk8/user-yTbJnZBjj8JJSAnP6LICaAZB/img-9Db82KiKvap8SPG9LmCgCa0Z.png?st=2025-04-16T06%3A13%3A11Z&se=2025-04-16T08%3A13%3A11Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=475fd488-6c59-44a5-9aa9-31c4db451bea&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-15T23%3A34%3A49Z&ske=2025-04-16T23%3A34%3A49Z&sks=b&skv=2024-08-04&sig=iP0qa9bA9aygVy1aRqUwuCLgtBplUjsJy8qBlsS%2B2oY%3D
+2025-04-16 10:13:11,405 [ERROR] ❌ Ошибка при публикации статьи 'Возрождение интереса к текстовому контенту': publish_to_wordpress() takes from 2 to 4 positional arguments but 5 were given
+2025-04-16 10:17:02,622 [INFO] 🔄 Обработка темы: Возрождение интереса к текстовому контенту
+2025-04-16 10:17:14,546 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 10:17:14,586 [INFO] ✅ Генерация завершена.
+2025-04-16 10:17:32,626 [INFO] HTTP Request: POST https://api.openai.com/v1/images/generations "HTTP/1.1 200 OK"
+2025-04-16 10:17:32,661 [INFO] 🖼 Изображение сгенерировано: https://oaidalleapiprodscus.blob.core.windows.net/private/org-80ZbSpkdhK3kZPnpCX3xGTk8/user-yTbJnZBjj8JJSAnP6LICaAZB/img-cXbSL8CbRfGxBBgQv2SeZEU7.png?st=2025-04-16T06%3A17%3A32Z&se=2025-04-16T08%3A17%3A32Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=475fd488-6c59-44a5-9aa9-31c4db451bea&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-15T23%3A47%3A17Z&ske=2025-04-16T23%3A47%3A17Z&sks=b&skv=2024-08-04&sig=vd1TMOBk3HXZ%2BwZ%2BQ%2B7CY4k8YusT56z79Vk62nWBpVM%3D
+2025-04-16 10:17:32,662 [ERROR] ❌ Ошибка при публикации статьи 'Возрождение интереса к текстовому контенту': publish_to_wordpress() takes from 2 to 4 positional arguments but 5 were given
+2025-04-16 10:20:40,937 [INFO] 🔄 Обработка темы: Возрождение интереса к текстовому контенту
+2025-04-16 10:20:54,473 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 10:20:54,509 [INFO] ✅ Генерация завершена.
+2025-04-16 10:21:16,275 [INFO] HTTP Request: POST https://api.openai.com/v1/images/generations "HTTP/1.1 200 OK"
+2025-04-16 10:21:16,311 [INFO] 🖼 Изображение сгенерировано: https://oaidalleapiprodscus.blob.core.windows.net/private/org-80ZbSpkdhK3kZPnpCX3xGTk8/user-yTbJnZBjj8JJSAnP6LICaAZB/img-uMVMl7OyrgEqouFqp5UsHHm5.png?st=2025-04-16T06%3A21%3A16Z&se=2025-04-16T08%3A21%3A16Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=475fd488-6c59-44a5-9aa9-31c4db451bea&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-16T00%3A05%3A33Z&ske=2025-04-17T00%3A05%3A33Z&sks=b&skv=2024-08-04&sig=6TRlH8tikC7ZxhNUdNnlNb7xxTquhgX4w7ZlT0t3K%2BI%3D
+2025-04-16 10:21:25,242 [INFO] ✅ Пост опубликован: https://blog.offonika.ru/возрождение-интереса-к-текстовому-контенту/
+2025-04-16 10:21:25,521 [INFO] 📩 Уведомление отправлено в Telegram.
+2025-04-16 10:21:27,450 [INFO] 📊 Статус и ссылка обновлены в Google Sheets.
+2025-04-16 10:26:21,758 [INFO] 🔄 Обработка темы: Социальные сети как новые поисковые системы
+2025-04-16 10:26:54,499 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 10:26:54,538 [INFO] ✅ Генерация завершена.
+2025-04-16 10:27:17,156 [INFO] HTTP Request: POST https://api.openai.com/v1/images/generations "HTTP/1.1 200 OK"
+2025-04-16 10:27:17,192 [INFO] 🖼 Изображение сгенерировано: https://oaidalleapiprodscus.blob.core.windows.net/private/org-80ZbSpkdhK3kZPnpCX3xGTk8/user-yTbJnZBjj8JJSAnP6LICaAZB/img-eCAYMoCiFTJxlDSnKnQVCBGT.png?st=2025-04-16T06%3A27%3A17Z&se=2025-04-16T08%3A27%3A17Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=475fd488-6c59-44a5-9aa9-31c4db451bea&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-16T00%3A03%3A13Z&ske=2025-04-17T00%3A03%3A13Z&sks=b&skv=2024-08-04&sig=5pkMHWaUpSocWpUjnJKkWR8bWiP7NqZerT/INPsv5uE%3D
+2025-04-16 10:27:23,802 [INFO] ✅ Пост опубликован: https://blog.offonika.ru/социальные-сети-как-новые-поисковые-системы/
+2025-04-16 10:27:24,146 [INFO] 📩 Уведомление отправлено в Telegram.
+2025-04-16 10:27:26,007 [INFO] 📊 Статус и ссылка обновлены в Google Sheets.
+2025-04-16 10:32:52,081 [INFO] 🔄 Обработка темы: Возрождение интереса к текстовому контенту
+2025-04-16 10:33:05,139 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 10:33:05,179 [INFO] ✅ Генерация завершена.
+2025-04-16 10:33:24,473 [INFO] HTTP Request: POST https://api.openai.com/v1/images/generations "HTTP/1.1 200 OK"
+2025-04-16 10:33:24,509 [INFO] 🖼 Изображение сгенерировано: https://oaidalleapiprodscus.blob.core.windows.net/private/org-80ZbSpkdhK3kZPnpCX3xGTk8/user-yTbJnZBjj8JJSAnP6LICaAZB/img-MfVvdI3bhSlxOAvXx3Wi8nS1.png?st=2025-04-16T06%3A33%3A24Z&se=2025-04-16T08%3A33%3A24Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=475fd488-6c59-44a5-9aa9-31c4db451bea&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-15T17%3A57%3A46Z&ske=2025-04-16T17%3A57%3A46Z&sks=b&skv=2024-08-04&sig=rPqgDW/L1ofar9BbIgFcHBfmrB%2ByzTdWCTUOlLwhK9k%3D
+2025-04-16 10:33:31,218 [INFO] ✅ Пост опубликован: https://blog.offonika.ru/возрождение-интереса-к-текстовому-контенту/
+2025-04-16 10:33:31,481 [INFO] 📩 Уведомление отправлено в Telegram.
+2025-04-16 10:33:32,982 [INFO] 📊 Статус и ссылка обновлены в Google Sheets.
+2025-04-16 10:33:32,983 [INFO] 🔄 Обработка темы: Омниканальность в электронной коммерции
+2025-04-16 10:33:46,876 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 10:33:46,917 [INFO] ✅ Генерация завершена.
+2025-04-16 10:34:11,207 [INFO] HTTP Request: POST https://api.openai.com/v1/images/generations "HTTP/1.1 200 OK"
+2025-04-16 10:34:11,243 [INFO] 🖼 Изображение сгенерировано: https://oaidalleapiprodscus.blob.core.windows.net/private/org-80ZbSpkdhK3kZPnpCX3xGTk8/user-yTbJnZBjj8JJSAnP6LICaAZB/img-L8EMGQR4nRwyxqvaAi5gfAlB.png?st=2025-04-16T06%3A34%3A11Z&se=2025-04-16T08%3A34%3A11Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=475fd488-6c59-44a5-9aa9-31c4db451bea&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-15T23%3A48%3A33Z&ske=2025-04-16T23%3A48%3A33Z&sks=b&skv=2024-08-04&sig=Kbg0lX66kIu8n4bPRY9lYqbkCJRkI/MX51koh%2BBMLq8%3D
+2025-04-16 10:34:18,708 [INFO] ✅ Пост опубликован: https://blog.offonika.ru/омниканальность-в-электронной-коммерции/
+2025-04-16 10:34:18,966 [INFO] 📩 Уведомление отправлено в Telegram.
+2025-04-16 10:34:20,532 [INFO] 📊 Статус и ссылка обновлены в Google Sheets.
+2025-04-16 11:18:52,397 [INFO] 🔄 Обработка темы: Возрождение интереса к текстовому контенту
+2025-04-16 11:19:08,341 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 11:19:08,369 [INFO] ✅ Генерация завершена.
+2025-04-16 11:19:29,415 [INFO] HTTP Request: POST https://api.openai.com/v1/images/generations "HTTP/1.1 200 OK"
+2025-04-16 11:19:29,451 [INFO] 🖼 Изображение сгенерировано: https://oaidalleapiprodscus.blob.core.windows.net/private/org-80ZbSpkdhK3kZPnpCX3xGTk8/user-yTbJnZBjj8JJSAnP6LICaAZB/img-cBAHH6QiZNfV57tlmAgmIBpm.png?st=2025-04-16T07%3A19%3A29Z&se=2025-04-16T09%3A19%3A29Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=475fd488-6c59-44a5-9aa9-31c4db451bea&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-15T23%3A33%3A57Z&ske=2025-04-16T23%3A33%3A57Z&sks=b&skv=2024-08-04&sig=O6iTCaZ0V2CNWRIAo8v3jL9pJtH1JAiki9tzaNWpPbo%3D
+2025-04-16 11:19:36,747 [INFO] ✅ Пост опубликован: https://blog.offonika.ru/возрождение-интереса-к-текстовому-контенту/
+2025-04-16 11:19:37,268 [INFO] 📩 Уведомление отправлено в Telegram.
+2025-04-16 11:19:38,378 [INFO] 📊 Статус и ссылка обновлены в Google Sheets.
+2025-04-16 11:23:40,203 [INFO] 🔄 Обработка темы: Возрождение интереса к текстовому контенту
+2025-04-16 11:23:50,888 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 11:23:50,928 [INFO] ✅ Генерация завершена.
+2025-04-16 11:24:10,831 [INFO] HTTP Request: POST https://api.openai.com/v1/images/generations "HTTP/1.1 200 OK"
+2025-04-16 11:24:10,832 [INFO] 🖼 Изображение сгенерировано: https://oaidalleapiprodscus.blob.core.windows.net/private/org-80ZbSpkdhK3kZPnpCX3xGTk8/user-yTbJnZBjj8JJSAnP6LICaAZB/img-wuj7yiPr8U6bEgnFFNGJsAn7.png?st=2025-04-16T07%3A24%3A10Z&se=2025-04-16T09%3A24%3A10Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=475fd488-6c59-44a5-9aa9-31c4db451bea&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-15T20%3A59%3A42Z&ske=2025-04-16T20%3A59%3A42Z&sks=b&skv=2024-08-04&sig=oWQow00eIPWj4uMHCgDZN%2BPdMD/VIWhpQhb6efmPKtY%3D
+2025-04-16 11:24:19,249 [INFO] ✅ Пост опубликован: https://blog.offonika.ru/возрождение-интереса-к-текстовому-контенту/
+2025-04-16 11:24:19,529 [INFO] 📩 Уведомление отправлено в Telegram.
+2025-04-16 11:24:20,633 [INFO] 📊 Статус и ссылка обновлены в Google Sheets.
+2025-04-16 11:25:46,656 [INFO] 🔄 Обработка темы: Возрождение интереса к текстовому контенту
+2025-04-16 11:26:16,851 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 11:26:16,891 [INFO] ✅ Генерация завершена.
+2025-04-16 11:26:34,181 [INFO] HTTP Request: POST https://api.openai.com/v1/images/generations "HTTP/1.1 200 OK"
+2025-04-16 11:26:34,182 [INFO] 🖼 Изображение сгенерировано: https://oaidalleapiprodscus.blob.core.windows.net/private/org-80ZbSpkdhK3kZPnpCX3xGTk8/user-yTbJnZBjj8JJSAnP6LICaAZB/img-bVFUZQzkhip2NlyBPN5MbXyg.png?st=2025-04-16T07%3A26%3A34Z&se=2025-04-16T09%3A26%3A34Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=475fd488-6c59-44a5-9aa9-31c4db451bea&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-16T00%3A10%3A27Z&ske=2025-04-17T00%3A10%3A27Z&sks=b&skv=2024-08-04&sig=OakDD3K7jmzyjAiuoIucYfCDRaro0ZF9NvOfTWJcCS0%3D
+2025-04-16 11:26:42,265 [INFO] ✅ Пост опубликован: https://blog.offonika.ru/возрождение-интереса-к-текстовому-контенту/
+2025-04-16 11:26:42,535 [INFO] 📩 Уведомление отправлено в Telegram.
+2025-04-16 11:26:43,602 [INFO] 📊 Статус и ссылка обновлены в Google Sheets.
+2025-04-16 11:27:40,934 [INFO] 🔄 Обработка темы: Возрождение интереса к текстовому контенту
+2025-04-16 11:27:52,694 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 11:27:52,727 [INFO] ✅ Генерация завершена.
+2025-04-16 11:28:15,197 [INFO] HTTP Request: POST https://api.openai.com/v1/images/generations "HTTP/1.1 200 OK"
+2025-04-16 11:28:15,232 [INFO] 🖼 Изображение сгенерировано: https://oaidalleapiprodscus.blob.core.windows.net/private/org-80ZbSpkdhK3kZPnpCX3xGTk8/user-yTbJnZBjj8JJSAnP6LICaAZB/img-XgQG0ofIZbehTGNHLdahrrgm.png?st=2025-04-16T07%3A28%3A15Z&se=2025-04-16T09%3A28%3A15Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=475fd488-6c59-44a5-9aa9-31c4db451bea&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-16T08%3A07%3A20Z&ske=2025-04-17T08%3A07%3A20Z&sks=b&skv=2024-08-04&sig=4FdN6Iv2TIAnEvl4DRTUVGiuiVOpn0c34ATSoyTxWwc%3D
+2025-04-16 11:28:23,276 [INFO] ✅ Пост опубликован: https://blog.offonika.ru/возрождение-интереса-к-текстовому-контенту/
+2025-04-16 11:28:23,537 [INFO] 📩 Уведомление отправлено в Telegram.
+2025-04-16 11:28:24,694 [INFO] 📊 Статус и ссылка обновлены в Google Sheets.
+2025-04-16 11:36:42,904 [INFO] 🔄 Обработка темы: Возрождение интереса к текстовому контенту
+2025-04-16 11:36:57,419 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 11:36:57,459 [INFO] ✅ Генерация завершена.
+2025-04-16 11:37:15,268 [INFO] HTTP Request: POST https://api.openai.com/v1/images/generations "HTTP/1.1 200 OK"
+2025-04-16 11:37:15,305 [INFO] 🖼 Изображение сгенерировано: https://oaidalleapiprodscus.blob.core.windows.net/private/org-80ZbSpkdhK3kZPnpCX3xGTk8/user-yTbJnZBjj8JJSAnP6LICaAZB/img-CEFBNl5MYr75Gassaak3fODa.png?st=2025-04-16T07%3A37%3A15Z&se=2025-04-16T09%3A37%3A15Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=475fd488-6c59-44a5-9aa9-31c4db451bea&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-16T00%3A02%3A37Z&ske=2025-04-17T00%3A02%3A37Z&sks=b&skv=2024-08-04&sig=RILsfmXkrwi42Yg%2BYYbCen7Ot3qZJc22giwT1yQvPFY%3D
+2025-04-16 11:37:23,839 [INFO] ✅ Пост опубликован: https://blog.offonika.ru/возрождение-интереса-к-текстовому-контенту/
+2025-04-16 11:37:24,178 [INFO] 📩 Уведомление отправлено в Telegram.
+2025-04-16 11:37:24,812 [INFO] 📊 Статус и ссылка обновлены в Google Sheets.

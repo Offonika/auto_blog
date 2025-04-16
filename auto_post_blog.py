@@ -13,7 +13,7 @@ from utils.telegram_notify import send_telegram_message
 from utils.image_generator import generate_image
 from utils.prompt_builder import build_cover_prompt
 
-# === Логирование в файл ===
+# === Логирование ===
 log_dir = "logs"
 os.makedirs(log_dir, exist_ok=True)
 logging.basicConfig(
@@ -22,31 +22,36 @@ logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(message)s",
 )
 
-# === Загрузка переменных окружения ===
+# === Загрузка .env ===
 load_dotenv()
 
-# === Настройка Google Sheets ===
+# === Google Sheets ===
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name(
-    os.getenv("GOOGLE_SERVICE_ACCOUNT_FILE"), scope)
+creds = ServiceAccountCredentials.from_json_keyfile_name(os.getenv("GOOGLE_SERVICE_ACCOUNT_FILE"), scope)
 client = gspread.authorize(creds)
 sheet = client.open_by_key(os.getenv("GOOGLE_SHEET_ID")).worksheet(os.getenv("GOOGLE_SHEET_TAB_NAME"))
 
-# === Категории ===
+# === Карта рубрик ===
 category_map = {
     "Технологии": 1,
     "Советы": 2,
-    "Обзоры": 3
+    "Обзоры": 3,
+    "Маркетинг": 14,
+    "Соцсети": 15,
+    "E-commerce": 16,
+    "Бизнес": 17,
+    "Медиа": 18,
+    "Цифровая безопасность": 19
 }
 
-# === Получение данных ===
+# === Чтение таблицы ===
 rows = sheet.get_all_records()
 today = datetime.now().strftime("%Y-%m-%d")
 
 for i, row in enumerate(rows):
     raw_date = row.get("Дата публикации")
 
-    # === Обработка формата даты ===
+    # Обработка даты
     if isinstance(raw_date, int):
         base_date = datetime(1899, 12, 30)
         date = (base_date + timedelta(days=raw_date)).strftime("%Y-%m-%d")
@@ -60,7 +65,6 @@ for i, row in enumerate(rows):
                 logging.warning(f"⚠️ Некорректная дата: {raw_date}")
                 continue
     else:
-        logging.warning(f"⚠️ Неизвестный формат даты: {raw_date}")
         continue
 
     title = row.get("Тема")
@@ -72,16 +76,27 @@ for i, row in enumerate(rows):
     role = row.get("Роль", "")
     temperature = float(row.get("Температура", 0.7) or 0.7)
     focus_keyword = row.get("Фокусный ключевик", "")
-    category_id = category_map.get(category_name, 1)
+
+    # Новые визуальные поля
+    style = row.get("Стиль", "")
+    composition = row.get("Композиция", "")
+    color_palette = row.get("Цветовая палитра", "")
+    details = row.get("Детализация", "")
+
+    # Категории
+    category_names = [name.strip() for name in category_name.split(",")]
+    category_ids = [category_map.get(name, 1) for name in category_names if name in category_map]
+    if not category_ids:
+        category_ids = [1]
 
     if date <= today and status == "к публикации":
 
-        # 🔁 Добавим фокусный ключ в заголовок, если он там не содержится
         if focus_keyword and focus_keyword.lower() not in title.lower():
             title += f": {focus_keyword.capitalize()}"
 
         print(f"\n🔄 Обработка темы: {title}")
         logging.info(f"🔄 Обработка темы: {title}")
+
         try:
             print("🧠 Генерация статьи...")
             content = generate_article(title, keywords, system_prompt, role, temperature, focus_keyword)
@@ -96,7 +111,11 @@ for i, row in enumerate(rows):
                 system_prompt=system_prompt,
                 keywords=keywords,
                 role=role,
-                temperature=temperature
+                temperature=temperature,
+                style=style,
+                composition=composition,
+                color_palette=color_palette,
+                details=details
             )
             print(f"🖼 Промт генерации изображения (dalle): {cover_prompt}")
 
@@ -104,12 +123,12 @@ for i, row in enumerate(rows):
                 image_url = generate_image(cover_prompt)
                 logging.info(f"🖼 Изображение сгенерировано: {image_url}")
             except Exception as img_error:
-                print(f"⚠️ Ошибка генерации/загрузки обложки: {img_error}")
-                logging.warning(f"⚠️ Ошибка генерации/загрузки обложки: {img_error}")
+                print(f"⚠️ Ошибка генерации обложки: {img_error}")
+                logging.warning(f"⚠️ Ошибка генерации обложки: {img_error}")
                 image_url = ""
 
             print("📤 Публикация в WordPress...")
-            link = publish_to_wordpress(title, content, category_id, focus_keyword, image_url)
+            link = publish_to_wordpress(title, content, category_ids, focus_keyword, image_url)
             print(f"✅ Пост опубликован: {link}")
             logging.info(f"✅ Пост опубликован: {link}")
 
@@ -118,8 +137,8 @@ for i, row in enumerate(rows):
             print("📩 Уведомление отправлено в Telegram.")
             logging.info("📩 Уведомление отправлено в Telegram.")
 
-            sheet.update_cell(i + 2, 4, "опубликовано")  # Статус
-            sheet.update_cell(i + 2, 8, link)            # Ссылка
+            sheet.update_cell(i + 2, 4, "опубликовано")
+            sheet.update_cell(i + 2, 8, link)
             print("📊 Статус и ссылка обновлены в Google Sheets.")
             logging.info("📊 Статус и ссылка обновлены в Google Sheets.")
 
@@ -127,7 +146,7 @@ for i, row in enumerate(rows):
             print(f"❌ Ошибка при публикации статьи '{title}': {e}")
             logging.error(f"❌ Ошибка при публикации статьи '{title}': {e}")
             try:
-                send_telegram_message(f"❌ Ошибка публикации статьи '{title}': {e}")
+                send_telegram_message(f"❌ Ошибка публикации: {title}\n{e}")
             except Exception as telegram_error:
-                print(f"⚠️ Ошибка при отправке в Telegram: {telegram_error}")
-                logging.warning(f"⚠️ Ошибка при отправке в Telegram: {telegram_error}")
+                print(f"⚠️ Ошибка отправки в Telegram: {telegram_error}")
+                logging.warning(f"⚠️ Ошибка отправки в Telegram: {telegram_error}")

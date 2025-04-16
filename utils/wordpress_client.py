@@ -10,7 +10,21 @@ def slugify(text):
     return re.sub(r"[\s_]+", "-", text)
 
 
-def publish_to_wordpress(title, content, category_id=1, focus_keyword="", image_url=""):
+# === Обновлённая карта рубрик ===
+category_map = {
+    "Советы": 4,
+    "Технологии": 2,
+    "Маркетинг": 14,
+    "Соцсети": 15,
+    "E-commerce": 16,
+    "Бизнес": 17,
+    "Медиа": 18,
+    "Цифровая безопасность": 19,
+    "Обзоры": 3
+}
+
+
+def publish_to_wordpress(title, content, category_ids=None, focus_keyword="", image_url=None):
     token = get_jwt_token()
     url = os.getenv("WP_URL") + "/wp-json/wp/v2/posts"
     headers = {
@@ -18,20 +32,24 @@ def publish_to_wordpress(title, content, category_id=1, focus_keyword="", image_
         "Content-Type": "application/json"
     }
 
-    # === Генерация слага на основе ключевика
+    # === Генерация слага на основе ключевика ===
     slug = slugify(focus_keyword or title)
     excerpt = f"{focus_keyword.capitalize()}. Узнайте больше в статье."
 
-    # === Загрузка обложки, если есть image_url
-    media_id = None
+    # === Загрузка обложки, если передана ===
+    media_id = 0
     if image_url:
         try:
             media_id = upload_to_wordpress(image_url)
         except Exception as e:
             print(f"⚠️ Ошибка загрузки обложки: {e}")
-            media_id = None
+            media_id = 0
 
-    # === Публикация
+    # === Обработка рубрик ===
+    if not category_ids:
+        category_ids = [1]  # Fallback: без рубрики
+
+    # === Публикация ===
     data = {
         "title": title,
         "content": content,
@@ -39,8 +57,8 @@ def publish_to_wordpress(title, content, category_id=1, focus_keyword="", image_
         "slug": slug,
         "status": "publish",
         "format": "standard",
-        "categories": [category_id],
-        "featured_media": media_id or 0,
+        "categories": category_ids,
+        "featured_media": media_id,
         "meta": {
             "rank_math_focus_keyword": focus_keyword
         }
